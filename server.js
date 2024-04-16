@@ -1,6 +1,11 @@
 const express = require("express");
 const app = express();
 
+app.use(
+  cors({
+    origin: "https://personalised-chatbot.vercel.app", // Replace with your website's URL
+  })
+);
 // Define a route to serve environment variables
 app.get("/env", (req, res) => {
   const envVariables = {
