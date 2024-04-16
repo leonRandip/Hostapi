@@ -5,7 +5,6 @@ const app = express();
 app.get("/env", (req, res) => {
   const envVariables = {
     API_KEY: process.env.API_KEY,
-    GitHubInfo: process.env.GitHubInfo
   };
   res.json(envVariables);
 });
